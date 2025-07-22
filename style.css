@@ -1,0 +1,651 @@
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  background-color:#e6ebea5c;
+  /* background-image:url(https://humanaccess.org/a/images/2024/03/30/ss13.jpg); */
+  /* background-image: url(https://humanaccess.org/a/images/2024/03/30/ss13.jpg); */
+  align-items: center;
+}
+:root {
+    --hue: 214;
+    --template-bg-light: #f0f4fb;
+    --template-text-dark: #495057;
+    --template-text-light: #fff;
+    --template-link-color: #2a69b8;
+    --template-special-color: #001b4c;
+}
+
+/* تنسيق شريط التنقل */
+ .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: rgb(11, 11, 11);
+  padding: 10px 20px;
+   /* padding-right: 15px; */
+  position: relative;
+    direction: rtl; /* هذا يخلي محتوى القائمة يبدأ من اليمين */
+ }
+
+.logo-img {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-right: 40px; /* ← يحرك اللوجو إلى اليسار */
+}
+
+
+
+
+/* ------------زر البحث-------------- */
+#searchBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* ------------------------------- */
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  direction: rtl; /* لأن اللغة عربية */
+    cursor: pointer;
+}
+
+.navMenu li {
+    list-style: none;
+    /* padding: 5px; */
+    /* margin: 44px; */
+    position: relative;  /* أحرّكه من موقعه الأصلي*/
+}
+
+.navMenu a {
+  color: rgb(2, 2, 2);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+   padding: 8px;
+}
+/* =============================================== */
+/* القائمة المنسدلة */
+.dropdown-menu  {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #e8ebef;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.dropdown-menu .drop li {
+  border-bottom: 1px solid #555;
+}
+
+.dropdown-menu .drop li a {
+  padding: 10px;
+}
+#menu-toggle {
+  display: none;
+}
+
+.menu-toggle-label {
+  display: none;
+  font-size: 26px;
+  color: black;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  margin-right: 10px; /* مسافة بينه وبين الشعار */
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  position: relative;
+  direction: rtl;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu li {
+  position: relative;
+}
+
+.navMenu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  display: block;
+  
+}
+
+/* القوائم المنسدلة */
+.dropdown-menu,
+.drop {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #e8ebef;
+  list-style: none;
+  padding: 10px;
+  z-index: 999;
+  min-width: 150px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li:hover > .drop {
+  display: block;
+  top: 0;
+  right: 100%;
+}
+
+/* استجابة الجوال */
+@media (max-width: 768px) {
+  .menu-toggle-label {
+    display: block;
+  }
+.navbar {
+    justify-content: flex-start; /* حتى يظهر الشعار ثم الزر */
+    gap: 10px; /* مسافة بينهم */
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fcfc;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked ~ .navbar .navMenu {
+    right: 0;
+  }
+
+  .navMenu a {
+    color: rgb(0, 0, 0);
+  }
+
+  /* إظهار القوائم المنسدلة عند الضغط */
+  .dropdown > input[type="checkbox"] {
+    display: none;
+  }
+
+
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #000000;
+  }
+
+  /* تعطيل hover في الجوال */
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+}
+
+
+
+/* إظهار القائمة عند المرور */
+.dropdown:hover .dropdown-menu {
+  display: block;
+     color: rgb(94, 217, 217);
+}
+
+/* تأثير عند التمرير */
+.navMenu a:hover{
+    color: rgb(94, 217, 217);
+  /* background-color: #e67e22; */
+}
+ .drop a:hover{
+color: rgb(94, 217, 217);
+ }
+
+p:hover{
+color: rgb(94, 217, 217);
+ }
+ h3:hover{
+color: rgb(94, 217, 217);
+ }
+
+/* =------------------------------ */
+
+
+
+/* ------------------------------زر ---------------------------------------- */
+/* تمرير ناعم عند الضغط على الروابط الداخلية */
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  margin: 0;
+  padding: 0 20px;
+  min-height: 2000px; 
+}
+
+/* header {
+  background: #0a586d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+} */
+
+/* زر العودة للأعلى -----------------------------------------------------*/
+.top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px; /* غيّر إلى right: 30px; لو تبي على اليمين */
+  background-color: #0a586d;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top:hover {
+  background-color: #094a5a;
+}
+
+/* --------------------------------------------الجزا الاول------------------------------------ */
+/* .hero-img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-img img {
+    height: 50vh;
+  }
+} */
+
+    .hero-img {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 500px;
+    }
+
+    .text-overlay h1 {
+      font-size: 2rem;
+      /* margin-bottom: 5px; */
+      text-align: center;
+    }
+
+    .text-overlay p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+
+    }
+
+    @media (max-width: 768px) {
+      .hero-img {
+        height: 50vh;
+      }
+
+      .text-overlay {
+        top: 15px;
+        left: 15px;
+        padding: 5px;
+      }
+
+      .text-overlay h1 {
+        font-size: 1.4rem;
+      }
+
+      .text-overlay p {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+
+/* --------------------------- الصوووور 3الجزء الثاتي---------------------- */
+
+.image-slider {
+  /* width: 300%; */
+  max-width: 600px;   /* حد أقصى للعرض */
+  height: 600px;      /* ارتفاع الصورة */
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;  /* توسيط */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1s ease-in-out;
+}
+
+.slides img {
+  /* width: 100%; */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* -----------------------------الجزء الثالث مجالات العمل----------------------------- */
+h1{
+  margin-bottom: 77px;
+  align-items: center;
+  text-align: center;
+  color: #00bcd4;
+  direction: rtl; /* لأن اللغة عربية */
+}
+.p1{
+  margin-bottom: 77px;
+  align-items: center;
+  text-align: center;
+  /* color: #00bcd4; */
+  direction: rtl; /* لأن اللغة عربية */
+}
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.feature-box {
+  /* display: flex; */
+   background-color: rgb(231, 233, 234);
+  /* background-color: rgb(231, 233, 234); */
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  direction: rtl;
+  /* opacity:0.5; */
+}
+
+.feature-box img {
+  width: 100px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+/* استجابة الجوال */
+@media (max-width: 768px) {
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .feature-box {
+    width: 70%;
+    text-align: center;
+  }
+   
+
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff; /* لون خلفية الدائرة */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px; /* توسيط ومجال سفلي */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.icon-circle img {
+  width: 50%;
+  height: auto;}
+/* }---------------------------------------الجزء الرابع-------------------------------------- */
+.container-cir {
+  display:flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f8f8f8;
+  text-decoration: none;
+}
+
+.left {
+  /* flex: 2; */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+}
+.card {
+   background-color: rgb(231, 233, 234);
+  /* background: white; */
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  border-radius: 11px;
+}
+
+.card img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.card .date {
+  color: gray;
+  font-size: 12px;
+}
+
+.right {
+  flex: 1;
+  text-align: center;
+  background: white;
+  padding: 40px;
+  margin: 30px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border: 6px solid #00c1d4;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle p {
+  font-size: 22px;
+  margin: 0;
+  direction: rtl; /* لأن اللغة عربية */
+}
+
+.h2{
+  align-items: flex-start;
+  color: #010101;
+  direction: rtl; /* لأن اللغة عربية */
+}
+.year {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+/* استجابة الجوال */
+@media (max-width: 768px) {
+  .container-cir {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .feature-box {
+    width: 90%;}
+
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+/* ------------------------------------الجزء الخامس الاخبار------------------------------- */
+
+.left2 {
+  /* flex: 2; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ text-align: center;
+   /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+
+}
+.card2 {
+  background-color: rgb(231, 233, 234);
+  width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+  transition: transform 0.3s;
+  direction: rtl;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  /* opacity:0.5; */
+}
+
+.card2 img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+margin-bottom: 10px;
+direction: rtl;
+  
+}
+
+.card2 .date {
+  color: gray;
+  font-size: 12px;
+  direction: rtl;
+}
+/* استجابة الجوال */
+@media (max-width: 768px) {
+  .left2 {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .card2 {
+    width: 90%;}
+
+}
+.card2:hover {
+  transform: translateY(-5px);
+}
+
+/* تنسيق الفوتر =--------------------------------------------------------------------------*/
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+
+    .footer-logo img {
+      height: 50px;
+    }
+
+    .footer-info {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      color: #00bcd4;
+      font-size: 20px;
+      text-decoration: none;
+    }
