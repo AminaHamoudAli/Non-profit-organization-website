@@ -3,9 +3,17 @@
 //   alert('زر البحث يعمل!');
 // });
  const dropdownLinks = document.querySelectorAll(".dropdown > a");
+const darkModeToggle = document.getElementById('dark-mode-toggle');
 
+darkModeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
 
-
+// تحقق من الوضع المخزن في localStorage عند تحميل الصفحة
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+}
  
   // دالة لإظهار/إخفاء القوائم المنسدلة عند الضغط
   document.addEventListener("DOMContentLoaded", function () {
