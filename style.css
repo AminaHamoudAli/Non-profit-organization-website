@@ -4,6 +4,9 @@ body {
   font-family: 'Cairo', sans-serif;
   background-color:#e6ebea5c;
   align-items: center;
+    background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: background-color 0.3s, color 0.3s;
 }
 :root {
     --hue: 214;
@@ -14,7 +17,7 @@ body {
     --template-special-color: #001b4c;
 }
 /* --------------------dark mode--------------------------------- */
-.dark-mode {
+/* .dark-mode {
     background-color: #333;
     color: #fff;
     
@@ -38,8 +41,52 @@ button{
   color: #00bcd4;
   background-color: #00bcd4;
   z-index: 12222px;
+} */
+/* ------------------------------طريقة اخرى */
+/* .dark-mode{
+  background-color: black;
+  color: white; */
+  :root {
+  --dark-bg: #121212;
+  --dark-text: #ffffff;
+  --light-bg: #ffffff;
+  --light-text: #000000;
+  
 }
-/* تنسيق شريط التنقل */
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* الزر */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* لليمين استخدم right بدلاً من left */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle::before {
+  content: '🌙'; /* الافتراضي */
+}
+
+body.dark-mode #darkModeToggle::before {
+  content: '☀️'; /* إذا الوضع داكن */
+}
+
+/* تنسيق شريط التنقل ---------------------------------*/
  .navbar {
   display: flex;
   align-items: center;

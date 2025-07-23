@@ -1,16 +1,16 @@
 
  const dropdownLinks = document.querySelectorAll(".dropdown > a");
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+// const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-darkModeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-});
+// darkModeToggle.addEventListener('click', function() {
+//     document.body.classList.toggle('dark-mode');
+//     localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+// });
 
-// تحقق من الوضع المخزن في localStorage عند تحميل الصفحة
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
+// // تحقق من الوضع المخزن في localStorage عند تحميل الصفحة
+// if (localStorage.getItem('darkMode') === 'true') {
+//     document.body.classList.add('dark-mode');
+// }
  
   // دالة لإظهار/إخفاء القوائم المنسدلة عند الضغط
   document.addEventListener("DOMContentLoaded", function () {
@@ -44,3 +44,31 @@ if (localStorage.getItem('darkMode') === 'true') {
       }
     });
   });
+// // --------------طريقة اخرى-----------------------
+//  const dropdownLinks = document.getElementById("toggleButton")
+//  dropdownLinks.addEventListener('click',function(){
+//   document.body.classList.toggle("dark-mode")
+//  })
+
+  const toggleBtn = document.getElementById("darkModeToggle");
+
+  // تحميل الوضع من localStorage عند دخول الصفحة
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedMode = localStorage.getItem("dark-mode");
+    if (savedMode === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+
+  // تبديل الوضع وحفظه
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("dark-mode", "enabled");
+    } else {
+      localStorage.setItem("dark-mode", "disabled");
+    }
+  });
+
+

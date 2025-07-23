@@ -48,11 +48,3 @@ if (storedData) {
     console.log(formData);
     // يمكنك استخدام formData.name, formData.email, formData.phone, formData.subject, formData.message
 }
-
-
-//  function initMap() {
-//         const map = new google.maps.Map(document.getElementById("map"), {
-//             center: { lat: 15.3694, lng: 44.2067 }, // إحداثيات اليمن
-//             zoom: 7,
-//         });
-//     }
