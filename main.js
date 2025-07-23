@@ -1,7 +1,4 @@
-// // يمكنك مستقبلاً إضافة تفاعل بحث أو قائمة منبثقة هنا
-// document.getElementById('searchBtn').addEventListener('click', () => {
-//   alert('زر البحث يعمل!');
-// });
+
  const dropdownLinks = document.querySelectorAll(".dropdown > a");
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
@@ -19,9 +16,9 @@ if (localStorage.getItem('darkMode') === 'true') {
   document.addEventListener("DOMContentLoaded", function () {
     dropdownLinks.forEach(link => {
       link.addEventListener("click", function (e) {
-        e.preventDefault(); // يمنع الانتقال للرابط #
+        e.preventDefault(); // 
 
-        // إغلاق أي قائمة مفتوحة أخرى
+        // إغلاق أي قائمة مفتوحة 
         document.querySelectorAll(".dropdown-menu").forEach(menu => {
           if (menu !== this.nextElementSibling) {
             menu.style.display = "none";

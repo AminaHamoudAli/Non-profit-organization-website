@@ -2,11 +2,7 @@
 body {
   margin: 0;
   font-family: 'Cairo', sans-serif;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   background-color:#e6ebea5c;
-  /* background-image:url(https://humanaccess.org/a/images/2024/03/30/ss13.jpg); */
-  /* background-image: url(https://humanaccess.org/a/images/2024/03/30/ss13.jpg); */
   align-items: center;
 }
 :root {
@@ -457,7 +453,20 @@ h1{
 .icon-circle img {
   width: 50%;
   height: auto;}
+
+ /* .feature-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.feature-box.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
 /* }---------------------------------------الجزء الرابع-------------------------------------- */
+
 .container-cir {
   display:flex;
   gap: 40px;
@@ -482,12 +491,17 @@ h1{
   align-items: flex-start;
   margin-bottom: 10px;
   border-radius: 11px;
+  /* overflow: hidden; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-direction: row;
 }
+
 
 .card img {
   width: 100px;
   height: 70px;
   object-fit: cover;
+  border-left: 3px solid #ddd;
 }
 
 .card .date {
@@ -504,8 +518,8 @@ h1{
 }
 
 .circle {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border: 6px solid #00c1d4;
   border-radius: 50%;
   margin: 20px auto;
@@ -516,12 +530,12 @@ h1{
 }
 
 .circle p {
-  font-size: 22px;
+  font-size: 19px;
   margin: 0;
   direction: rtl; /* لأن اللغة عربية */
 }
 
-.h2{
+.h3{
   align-items: flex-start;
   color: #010101;
   direction: rtl; /* لأن اللغة عربية */
@@ -597,13 +611,12 @@ direction: rtl;
   direction: rtl;
 }
 /* استجابة الجوال */
-@media (max-width: 768px) {
+@media (max-width: 76px) {
   .left2 {
     flex-direction: column;
     align-items: center;
 
   }
-
   .card2 {
     width: 90%;}
 

@@ -10,6 +10,7 @@ body{
   direction: rtl;
   border-radius: 30px;
   margin-top: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .faq-section h2 {
@@ -32,7 +33,7 @@ body{
   margin-bottom: 15px;
   background-color: #fff;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
@@ -75,7 +76,7 @@ body{
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 /* العنوان */
@@ -119,7 +120,7 @@ body{
   flex: 1;
 }
 
-/* reCAPTCHA الوهمي */
+/* ------------------*/
 .captcha-box {
   display: flex;
   align-items: center;
