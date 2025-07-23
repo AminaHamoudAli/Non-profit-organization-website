@@ -1,0 +1,65 @@
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+  direction: rtl;
+    width: 90%;
+    height: 90%;
+  background-color: #ffffff; /* لون خلفية خفيف */
+    border-radius: 47px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.ima-log img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cont-info {
+  flex: 1;
+  color: #0077cc; /* أزرق */
+}
+
+.cont-info i {
+  font-size: 24px;
+  color: #0077cc;
+  margin-left: 10px;
+}
+
+.cont-info h4 {
+  font-size: 19px;
+  margin: 10px 0 5px;
+  color: #1f1f1f;
+}
+
+.cont-info p {
+  font-size: 16px;
+  color: #292828;
+  margin-bottom: 10px;
+  
+}
+.p1:hover{
+     color: #292828;
+}
+/* استجابة الجوال */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ima-log img {
+    max-width: 80%;
+  }
+}
+
+.blo{
+    color: #8ac3ec;
+}
