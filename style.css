@@ -248,12 +248,12 @@ color: rgb(94, 217, 217);
   scroll-behavior: smooth;
 } */
 
-body {
+/* body { */
   /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  margin: 0;
+  /* margin: 0;
   padding: 0 20px;
   min-height: 2000px; 
-}
+} */
 
 /* header {
   background: #0a586d;
@@ -266,27 +266,26 @@ body {
 /* زر العودة للأعلى -----------------------------------------------------*/
 .top {
   position: fixed;
-  bottom: 30px;
-  left: 30px; /* غيّر إلى right: 30px; لو تبي على اليمين */
+  bottom: 20px;
+  left: 20px; /* غيّر إلى right: 30px; لو تريده على اليمين */
+  width: 50px;
+  height: 50px;
   background-color: #fbfcfc;
   color: rgb(10, 10, 10);
-  padding: 5px 5px;
-  border-radius: 20%;
-  text-decoration: none;
-  font-size: 28px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
   cursor: pointer;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .top:hover {
   background-color: #829ba1;
 }
+
 
 /* --------------------------------------------الجزا الاول------------------------------------ */
 /* .hero-img img {
@@ -574,7 +573,7 @@ a{
   justify-content: center;
   gap: 20px;
   padding: 40px;
-
+background-color: white;
 }
 .card2 {
   background-color: rgb(231, 233, 234);
