@@ -32,7 +32,7 @@
       <li class="dropdown">
         <a href="#">من نحن ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="#">عن الوصول الانساني</a></li>
+          <li><a href="../من نحن/index.html">عن الوصول الانساني</a></li>
           <li><a href="#">اين نعمل</a></li>
           <li><a href="#">الجودة والاستراتيجية</a></li>
           <li><a href="#">شركائنا</a></li>
@@ -54,7 +54,7 @@
         <ul class="dropdown-menu">
           <li><a href="#">أخبار</a></li>
           <li><a href="#">مدونة</a></li>
-          <li><a href="تقارير اعلامية/index.html">تقارير إعلامية</a></li>
+          <li><a href="../تقارير اعلامية/index.html">تقارير إعلامية</a></li>
           <li><a href="#">قصة نجاح</a></li>
           <li class="dropdown">
             <a href="#">الإصدارات ▾</a>
@@ -142,21 +142,21 @@
 </section>
 <!-- ----------------------------------------- -->
 
-<div class="contact-form">
+<div class="contact-form" aria-label="نموذج الاتصال">
     <h2>للتواصل والاستفسار</h2>
     <form action="#" method="post">
       <div class="row">
         
-        <input type="email" placeholder="البريد الإلكتروني" id="email" required>
-        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="البريد الإلكتروني" id="email" required aria-label="البريد الإلكتروني">
+        <input type="text" placeholder="الاسم" required aria-label="الاسم">
       </div>
-      <input type="tel" placeholder="رقم الجوال">
-      <input type="text" placeholder="الموضوع">
+      <input type="tel" placeholder="رقم الجوال" aria-label="رقم الجوال">
+      <input type="text" placeholder="الموضوع"  aria-label=" اكتب الموضوع">
       <textarea placeholder="نص الرسالة" rows="5" required></textarea>
       
       <!-- مكان reCAPTCHA -->
-      <div class="captcha-box">
-        <div class="fake-captcha"></div>
+     <div class="captcha-box">
+      <div class="fake-captcha"></div>
         <label>
           <input type="checkbox"> لست برنامج روبوت
         </label>
@@ -164,7 +164,9 @@
 
       <button type="submit">إر سال</button>
     </form>
-  </div>
+  </div> 
+
+
 <!-- ============================ -->
 
 <div id="map">

@@ -1,18 +1,17 @@
 
   const faqItems = document.querySelectorAll(".faq-item");
-
   faqItems.forEach(item => {
-    const question = item.querySelector(".faq-question");
+    const question = item.querySelector(".faq-question")
     question.addEventListener("click", () => {
       item.classList.toggle("active");
     });
   });
-  // الحصول على النموذج
+  // _____________________________الجدول___________________________
+
 const contactForm = document.querySelector('.contact-form form');
 
-// إضافة مستمع حدث لإرسال النموذج
 contactForm.addEventListener('submit', function(event) {
-    // منع الإجراء الافتراضي لإرسال النموذج
+    // منع  لإرسال النموذج
     event.preventDefault();
 
     // الحصول على قيم الحقول
@@ -33,18 +32,17 @@ contactForm.addEventListener('submit', function(event) {
 
     localStorage.setItem('contactFormData', JSON.stringify(formData));
 
-    // يمكنك إضافة رسالة تأكيد أو إعادة توجيه المستخدم إلى صفحة أخرى هنا
+    //  رسالة تأكيد 
     alert('تم إرسال النموذج بنجاح!');
 });
 
 // استرجاع البيانات من التخزين المحلي
 const storedData = localStorage.getItem('contactFormData');
-
 // تحويل البيانات من سلسلة نصية إلى كائن
 if (storedData) {
     const formData = JSON.parse(storedData);
 
     // عرض البيانات في مكان ما على الصفحة
     console.log(formData);
-    // يمكنك استخدام formData.name, formData.email, formData.phone, formData.subject, formData.message
+   
 }

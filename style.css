@@ -299,12 +299,12 @@ body.dark-mode #darkModeToggle::before {
 color: rgb(94, 217, 217);
  }
 
-p:hover{
-color: rgb(94, 217, 217);
- }
  h3:hover{
 color: rgb(94, 217, 217);
  }
+.dropdown-menu {
+  display: none;
+}
 
 /* =------------------------------ */
 
@@ -511,7 +511,9 @@ h1{
   opacity: 1;
   transform: translateY(0);
 } */
-
+.features-section p:hover{
+  color: #000;
+}
 /* }---------------------------------------الجزء الرابع-------------------------------------- */
 
 .container-cir {
